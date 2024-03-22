@@ -1,5 +1,5 @@
-pub mod _all_tenants_authorization_result;
-pub use self::_all_tenants_authorization_result::AllTenantsAuthorizationResult;
+pub mod all_tenants_authorization_result;
+pub use self::all_tenants_authorization_result::AllTenantsAuthorizationResult;
 pub mod authorization_query;
 pub use self::authorization_query::AuthorizationQuery;
 pub mod authorization_query_v1;

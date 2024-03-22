@@ -89,7 +89,7 @@ pub enum ListUsersLocalUsersGetError {
 
 
 /// Get role (by the role id) directly from OPA cache.  If role is not found, returns 404. Possible reasons are either:  - role was never created via SDK or via the cloud console. - role was (very) recently created and the policy update did not propagate yet.
-pub async fn get_role_by_id_local_roles_role_id_get(configuration: &configuration::Configuration, role_id: &str, authorization: Option<models::serde_json::Value>) -> Result<models::SyncedRole, Error<GetRoleByIdLocalRolesRoleIdGetError>> {
+pub async fn get_role_by_id_local_roles_role_id_get(configuration: &configuration::Configuration, role_id: &str, authorization: Option<serde_json::Value>) -> Result<models::SyncedRole, Error<GetRoleByIdLocalRolesRoleIdGetError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -120,7 +120,7 @@ pub async fn get_role_by_id_local_roles_role_id_get(configuration: &configuratio
 }
 
 /// Get role (by the role name - case sensitive) directly from OPA cache.  If role is not found, returns 404. Possible reasons are either:  - role with such name was never created via SDK or via the cloud console. - role was (very) recently created and the policy update did not propagate yet.
-pub async fn get_role_by_name_local_roles_by_name_role_name_get(configuration: &configuration::Configuration, role_name: &str, authorization: Option<models::serde_json::Value>) -> Result<models::SyncedRole, Error<GetRoleByNameLocalRolesByNameRoleNameGetError>> {
+pub async fn get_role_by_name_local_roles_by_name_role_name_get(configuration: &configuration::Configuration, role_name: &str, authorization: Option<serde_json::Value>) -> Result<models::SyncedRole, Error<GetRoleByNameLocalRolesByNameRoleNameGetError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -151,7 +151,7 @@ pub async fn get_role_by_name_local_roles_by_name_role_name_get(configuration: &
 }
 
 /// Get user data directly from OPA cache.  If user does not exist in OPA cache (i.e: not synced), returns 404.
-pub async fn get_user_local_users_user_id_get(configuration: &configuration::Configuration, user_id: &str, authorization: Option<models::serde_json::Value>) -> Result<models::SyncedUser, Error<GetUserLocalUsersUserIdGetError>> {
+pub async fn get_user_local_users_user_id_get(configuration: &configuration::Configuration, user_id: &str, authorization: Option<serde_json::Value>) -> Result<models::SyncedUser, Error<GetUserLocalUsersUserIdGetError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -182,7 +182,7 @@ pub async fn get_user_local_users_user_id_get(configuration: &configuration::Con
 }
 
 /// Get roles **assigned to user** directly from OPA cache.  If user does not exist in OPA cache (i.e: not synced), returns 404.
-pub async fn get_user_permissions_local_users_user_id_permissions_get(configuration: &configuration::Configuration, user_id: &str, authorization: Option<models::serde_json::Value>) -> Result<std::collections::HashMap<String, serde_json::Value>, Error<GetUserPermissionsLocalUsersUserIdPermissionsGetError>> {
+pub async fn get_user_permissions_local_users_user_id_permissions_get(configuration: &configuration::Configuration, user_id: &str, authorization: Option<serde_json::Value>) -> Result<std::collections::HashMap<String, serde_json::Value>, Error<GetUserPermissionsLocalUsersUserIdPermissionsGetError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -213,7 +213,7 @@ pub async fn get_user_permissions_local_users_user_id_permissions_get(configurat
 }
 
 /// Get roles **assigned to user** directly from OPA cache.  If user does not exist in OPA cache (i.e: not synced), returns 404.
-pub async fn get_user_roles_local_users_user_id_roles_get(configuration: &configuration::Configuration, user_id: &str, authorization: Option<models::serde_json::Value>) -> Result<Vec<models::SyncedRole>, Error<GetUserRolesLocalUsersUserIdRolesGetError>> {
+pub async fn get_user_roles_local_users_user_id_roles_get(configuration: &configuration::Configuration, user_id: &str, authorization: Option<serde_json::Value>) -> Result<Vec<models::SyncedRole>, Error<GetUserRolesLocalUsersUserIdRolesGetError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -244,7 +244,7 @@ pub async fn get_user_roles_local_users_user_id_roles_get(configuration: &config
 }
 
 /// Get tenants **assigned to user** directly from OPA cache. This endpoint only returns tenants that the user **has an assigned role in**. i.e: if the user is assigned to tenant \"tenant1\" but has no roles in that tenant, \"tenant1\" will not be returned by this endpoint.  If user does not exist in OPA cache (i.e: not synced), returns 404.
-pub async fn get_user_tenants_local_users_user_id_tenants_get(configuration: &configuration::Configuration, user_id: &str, authorization: Option<models::serde_json::Value>) -> Result<Vec<String>, Error<GetUserTenantsLocalUsersUserIdTenantsGetError>> {
+pub async fn get_user_tenants_local_users_user_id_tenants_get(configuration: &configuration::Configuration, user_id: &str, authorization: Option<serde_json::Value>) -> Result<Vec<String>, Error<GetUserTenantsLocalUsersUserIdTenantsGetError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -275,7 +275,7 @@ pub async fn get_user_tenants_local_users_user_id_tenants_get(configuration: &co
 }
 
 /// Get all roles stored in OPA cache.
-pub async fn list_roles_local_roles_get(configuration: &configuration::Configuration, authorization: Option<models::serde_json::Value>) -> Result<Vec<models::SyncedRole>, Error<ListRolesLocalRolesGetError>> {
+pub async fn list_roles_local_roles_get(configuration: &configuration::Configuration, authorization: Option<serde_json::Value>) -> Result<Vec<models::SyncedRole>, Error<ListRolesLocalRolesGetError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -306,7 +306,7 @@ pub async fn list_roles_local_roles_get(configuration: &configuration::Configura
 }
 
 /// Get all users stored in OPA cache.  Be advised, if you have many (i.e: few hundreds or more) users this query might be expensive latency-wise.
-pub async fn list_users_local_users_get(configuration: &configuration::Configuration, authorization: Option<models::serde_json::Value>) -> Result<Vec<models::SyncedUser>, Error<ListUsersLocalUsersGetError>> {
+pub async fn list_users_local_users_get(configuration: &configuration::Configuration, authorization: Option<serde_json::Value>) -> Result<Vec<models::SyncedUser>, Error<ListUsersLocalUsersGetError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;

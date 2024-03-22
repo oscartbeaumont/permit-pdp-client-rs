@@ -40,7 +40,7 @@ pub enum SystemOpaHealthcheckHealthchecksOpaSystemGetError {
 }
 
 
-pub async fn health_opa_healthcheck_healthchecks_opa_healthy_get(configuration: &configuration::Configuration, authorization: Option<models::serde_json::Value>) -> Result<serde_json::Value, Error<HealthOpaHealthcheckHealthchecksOpaHealthyGetError>> {
+pub async fn health_opa_healthcheck_healthchecks_opa_healthy_get(configuration: &configuration::Configuration, authorization: Option<serde_json::Value>) -> Result<serde_json::Value, Error<HealthOpaHealthcheckHealthchecksOpaHealthyGetError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -70,7 +70,7 @@ pub async fn health_opa_healthcheck_healthchecks_opa_healthy_get(configuration: 
     }
 }
 
-pub async fn ready_opa_healthcheck_healthchecks_opa_ready_get(configuration: &configuration::Configuration, authorization: Option<models::serde_json::Value>) -> Result<serde_json::Value, Error<ReadyOpaHealthcheckHealthchecksOpaReadyGetError>> {
+pub async fn ready_opa_healthcheck_healthchecks_opa_ready_get(configuration: &configuration::Configuration, authorization: Option<serde_json::Value>) -> Result<serde_json::Value, Error<ReadyOpaHealthcheckHealthchecksOpaReadyGetError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -100,7 +100,7 @@ pub async fn ready_opa_healthcheck_healthchecks_opa_ready_get(configuration: &co
     }
 }
 
-pub async fn system_opa_healthcheck_healthchecks_opa_system_get(configuration: &configuration::Configuration, authorization: Option<models::serde_json::Value>) -> Result<serde_json::Value, Error<SystemOpaHealthcheckHealthchecksOpaSystemGetError>> {
+pub async fn system_opa_healthcheck_healthchecks_opa_system_get(configuration: &configuration::Configuration, authorization: Option<serde_json::Value>) -> Result<serde_json::Value, Error<SystemOpaHealthcheckHealthchecksOpaSystemGetError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;

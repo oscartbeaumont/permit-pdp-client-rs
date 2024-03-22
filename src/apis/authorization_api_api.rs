@@ -72,7 +72,7 @@ pub enum IsAllowedUrlAllowedUrlPostError {
 }
 
 
-pub async fn get_user_permissions_user_permissions_post(configuration: &configuration::Configuration, user_permissions_query: models::UserPermissionsQuery, authorization: Option<models::serde_json::Value>, x_permit_sdk_language: Option<&str>) -> Result<std::collections::HashMap<String, models::UserPermissionsResult>, Error<GetUserPermissionsUserPermissionsPostError>> {
+pub async fn get_user_permissions_user_permissions_post(configuration: &configuration::Configuration, user_permissions_query: models::UserPermissionsQuery, authorization: Option<serde_json::Value>, x_permit_sdk_language: Option<&str>) -> Result<std::collections::HashMap<String, models::UserPermissionsResult>, Error<GetUserPermissionsUserPermissionsPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -106,7 +106,7 @@ pub async fn get_user_permissions_user_permissions_post(configuration: &configur
     }
 }
 
-pub async fn get_user_tenants_user_tenants_post(configuration: &configuration::Configuration, user_tenants_query: models::UserTenantsQuery, authorization: Option<models::serde_json::Value>, x_permit_sdk_language: Option<&str>) -> Result<Vec<models::TenantDetails>, Error<GetUserTenantsUserTenantsPostError>> {
+pub async fn get_user_tenants_user_tenants_post(configuration: &configuration::Configuration, user_tenants_query: models::UserTenantsQuery, authorization: Option<serde_json::Value>, x_permit_sdk_language: Option<&str>) -> Result<Vec<models::TenantDetails>, Error<GetUserTenantsUserTenantsPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -140,7 +140,7 @@ pub async fn get_user_tenants_user_tenants_post(configuration: &configuration::C
     }
 }
 
-pub async fn is_allowed_all_tenants_allowed_all_tenants_post(configuration: &configuration::Configuration, authorization_query: models::AuthorizationQuery, authorization: Option<models::serde_json::Value>, x_permit_sdk_language: Option<&str>) -> Result<models::AllTenantsAuthorizationResult, Error<IsAllowedAllTenantsAllowedAllTenantsPostError>> {
+pub async fn is_allowed_all_tenants_allowed_all_tenants_post(configuration: &configuration::Configuration, authorization_query: models::AuthorizationQuery, authorization: Option<serde_json::Value>, x_permit_sdk_language: Option<&str>) -> Result<models::AllTenantsAuthorizationResult, Error<IsAllowedAllTenantsAllowedAllTenantsPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -174,7 +174,7 @@ pub async fn is_allowed_all_tenants_allowed_all_tenants_post(configuration: &con
     }
 }
 
-pub async fn is_allowed_allowed_post(configuration: &configuration::Configuration, query: models::Query, authorization: Option<models::serde_json::Value>, x_permit_sdk_language: Option<&str>) -> Result<models::AuthorizationResult, Error<IsAllowedAllowedPostError>> {
+pub async fn is_allowed_allowed_post(configuration: &configuration::Configuration, query: models::Query, authorization: Option<serde_json::Value>, x_permit_sdk_language: Option<&str>) -> Result<models::AuthorizationResult, Error<IsAllowedAllowedPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -208,7 +208,7 @@ pub async fn is_allowed_allowed_post(configuration: &configuration::Configuratio
     }
 }
 
-pub async fn is_allowed_bulk_allowed_bulk_post(configuration: &configuration::Configuration, authorization_query: Vec<models::AuthorizationQuery>, authorization: Option<models::serde_json::Value>, x_permit_sdk_language: Option<&str>) -> Result<models::BulkAuthorizationResult, Error<IsAllowedBulkAllowedBulkPostError>> {
+pub async fn is_allowed_bulk_allowed_bulk_post(configuration: &configuration::Configuration, authorization_query: Vec<models::AuthorizationQuery>, authorization: Option<serde_json::Value>, x_permit_sdk_language: Option<&str>) -> Result<models::BulkAuthorizationResult, Error<IsAllowedBulkAllowedBulkPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -270,7 +270,7 @@ pub async fn is_allowed_kong_kong_post(configuration: &configuration::Configurat
     }
 }
 
-pub async fn is_allowed_url_allowed_url_post(configuration: &configuration::Configuration, url_authorization_query: models::UrlAuthorizationQuery, authorization: Option<models::serde_json::Value>, x_permit_sdk_language: Option<&str>) -> Result<models::AuthorizationResult, Error<IsAllowedUrlAllowedUrlPostError>> {
+pub async fn is_allowed_url_allowed_url_post(configuration: &configuration::Configuration, url_authorization_query: models::UrlAuthorizationQuery, authorization: Option<serde_json::Value>, x_permit_sdk_language: Option<&str>) -> Result<models::AuthorizationResult, Error<IsAllowedUrlAllowedUrlPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
