@@ -1,5 +1,5 @@
 [package]
-name = "openapi"
+name = "permit-pdp-client-rs"
 version = "0.2.0"
 authors = ["OpenAPI Generator team and contributors"]
 description = "The PDP (Policy decision point) container wraps Open Policy Agent (OPA) with a higher-level API intended for fine grained application-level authorization. The PDP automatically handles pulling policy updates in real-time from a centrally managed cloud-service (api.permit.io)."
@@ -16,4 +16,5 @@ url = "^2.2"
 uuid = { version = "^1.0", features = ["serde", "v4"] }
 [dependencies.reqwest]
 version = "^0.11"
-features = ["json", "multipart"]
+default-features = false
+features = ["json", "multipart", "rustls-tls"]
