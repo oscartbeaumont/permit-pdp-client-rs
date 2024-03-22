@@ -174,7 +174,7 @@ pub async fn is_allowed_all_tenants_allowed_all_tenants_post(configuration: &con
     }
 }
 
-pub async fn is_allowed_allowed_post(configuration: &configuration::Configuration, query: models::Query, authorization: Option<serde_json::Value>, x_permit_sdk_language: Option<&str>) -> Result<models::AuthorizationResult, Error<IsAllowedAllowedPostError>> {
+pub async fn is_allowed_allowed_post(configuration: &configuration::Configuration, query: models::AuthorizationQuery, authorization: Option<serde_json::Value>, x_permit_sdk_language: Option<&str>) -> Result<models::AuthorizationResult, Error<IsAllowedAllowedPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
