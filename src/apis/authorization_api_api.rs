@@ -86,6 +86,9 @@ pub async fn get_user_permissions_user_permissions_post(configuration: &configur
     if let Some(local_var_param_value) = authorization {
         local_var_req_builder = local_var_req_builder.header("authorization", local_var_param_value.to_string());
     }
+    if let Some(ref local_var_token) = local_var_configuration.bearer_access_token {
+        local_var_req_builder = local_var_req_builder.bearer_auth(local_var_token.to_owned());
+    };
     if let Some(local_var_param_value) = x_permit_sdk_language {
         local_var_req_builder = local_var_req_builder.header("x-permit-sdk-language", local_var_param_value.to_string());
     }
@@ -120,6 +123,9 @@ pub async fn get_user_tenants_user_tenants_post(configuration: &configuration::C
     if let Some(local_var_param_value) = authorization {
         local_var_req_builder = local_var_req_builder.header("authorization", local_var_param_value.to_string());
     }
+    if let Some(ref local_var_token) = local_var_configuration.bearer_access_token {
+        local_var_req_builder = local_var_req_builder.bearer_auth(local_var_token.to_owned());
+    };
     if let Some(local_var_param_value) = x_permit_sdk_language {
         local_var_req_builder = local_var_req_builder.header("x-permit-sdk-language", local_var_param_value.to_string());
     }
@@ -154,6 +160,9 @@ pub async fn is_allowed_all_tenants_allowed_all_tenants_post(configuration: &con
     if let Some(local_var_param_value) = authorization {
         local_var_req_builder = local_var_req_builder.header("authorization", local_var_param_value.to_string());
     }
+    if let Some(ref local_var_token) = local_var_configuration.bearer_access_token {
+        local_var_req_builder = local_var_req_builder.bearer_auth(local_var_token.to_owned());
+    };
     if let Some(local_var_param_value) = x_permit_sdk_language {
         local_var_req_builder = local_var_req_builder.header("x-permit-sdk-language", local_var_param_value.to_string());
     }
@@ -188,6 +197,9 @@ pub async fn is_allowed_allowed_post(configuration: &configuration::Configuratio
     if let Some(local_var_param_value) = authorization {
         local_var_req_builder = local_var_req_builder.header("authorization", local_var_param_value.to_string());
     }
+    if let Some(ref local_var_token) = local_var_configuration.bearer_access_token {
+        local_var_req_builder = local_var_req_builder.bearer_auth(local_var_token.to_owned());
+    };
     if let Some(local_var_param_value) = x_permit_sdk_language {
         local_var_req_builder = local_var_req_builder.header("x-permit-sdk-language", local_var_param_value.to_string());
     }
@@ -222,6 +234,9 @@ pub async fn is_allowed_bulk_allowed_bulk_post(configuration: &configuration::Co
     if let Some(local_var_param_value) = authorization {
         local_var_req_builder = local_var_req_builder.header("authorization", local_var_param_value.to_string());
     }
+    if let Some(ref local_var_token) = local_var_configuration.bearer_access_token {
+        local_var_req_builder = local_var_req_builder.bearer_auth(local_var_token.to_owned());
+    };
     if let Some(local_var_param_value) = x_permit_sdk_language {
         local_var_req_builder = local_var_req_builder.header("x-permit-sdk-language", local_var_param_value.to_string());
     }
@@ -284,6 +299,9 @@ pub async fn is_allowed_url_allowed_url_post(configuration: &configuration::Conf
     if let Some(local_var_param_value) = authorization {
         local_var_req_builder = local_var_req_builder.header("authorization", local_var_param_value.to_string());
     }
+    if let Some(ref local_var_token) = local_var_configuration.bearer_access_token {
+        local_var_req_builder = local_var_req_builder.bearer_auth(local_var_token.to_owned());
+    };
     if let Some(local_var_param_value) = x_permit_sdk_language {
         local_var_req_builder = local_var_req_builder.header("x-permit-sdk-language", local_var_param_value.to_string());
     }

@@ -103,6 +103,9 @@ pub async fn get_role_by_id_local_roles_role_id_get(configuration: &configuratio
     if let Some(local_var_param_value) = authorization {
         local_var_req_builder = local_var_req_builder.header("authorization", local_var_param_value.to_string());
     }
+    if let Some(ref local_var_token) = local_var_configuration.bearer_access_token {
+        local_var_req_builder = local_var_req_builder.bearer_auth(local_var_token.to_owned());
+    };
 
     let local_var_req = local_var_req_builder.build()?;
     let local_var_resp = local_var_client.execute(local_var_req).await?;
@@ -134,6 +137,9 @@ pub async fn get_role_by_name_local_roles_by_name_role_name_get(configuration: &
     if let Some(local_var_param_value) = authorization {
         local_var_req_builder = local_var_req_builder.header("authorization", local_var_param_value.to_string());
     }
+    if let Some(ref local_var_token) = local_var_configuration.bearer_access_token {
+        local_var_req_builder = local_var_req_builder.bearer_auth(local_var_token.to_owned());
+    };
 
     let local_var_req = local_var_req_builder.build()?;
     let local_var_resp = local_var_client.execute(local_var_req).await?;
@@ -165,6 +171,9 @@ pub async fn get_user_local_users_user_id_get(configuration: &configuration::Con
     if let Some(local_var_param_value) = authorization {
         local_var_req_builder = local_var_req_builder.header("authorization", local_var_param_value.to_string());
     }
+    if let Some(ref local_var_token) = local_var_configuration.bearer_access_token {
+        local_var_req_builder = local_var_req_builder.bearer_auth(local_var_token.to_owned());
+    };
 
     let local_var_req = local_var_req_builder.build()?;
     let local_var_resp = local_var_client.execute(local_var_req).await?;
@@ -196,6 +205,9 @@ pub async fn get_user_permissions_local_users_user_id_permissions_get(configurat
     if let Some(local_var_param_value) = authorization {
         local_var_req_builder = local_var_req_builder.header("authorization", local_var_param_value.to_string());
     }
+    if let Some(ref local_var_token) = local_var_configuration.bearer_access_token {
+        local_var_req_builder = local_var_req_builder.bearer_auth(local_var_token.to_owned());
+    };
 
     let local_var_req = local_var_req_builder.build()?;
     let local_var_resp = local_var_client.execute(local_var_req).await?;
@@ -227,6 +239,9 @@ pub async fn get_user_roles_local_users_user_id_roles_get(configuration: &config
     if let Some(local_var_param_value) = authorization {
         local_var_req_builder = local_var_req_builder.header("authorization", local_var_param_value.to_string());
     }
+    if let Some(ref local_var_token) = local_var_configuration.bearer_access_token {
+        local_var_req_builder = local_var_req_builder.bearer_auth(local_var_token.to_owned());
+    };
 
     let local_var_req = local_var_req_builder.build()?;
     let local_var_resp = local_var_client.execute(local_var_req).await?;
@@ -258,6 +273,9 @@ pub async fn get_user_tenants_local_users_user_id_tenants_get(configuration: &co
     if let Some(local_var_param_value) = authorization {
         local_var_req_builder = local_var_req_builder.header("authorization", local_var_param_value.to_string());
     }
+    if let Some(ref local_var_token) = local_var_configuration.bearer_access_token {
+        local_var_req_builder = local_var_req_builder.bearer_auth(local_var_token.to_owned());
+    };
 
     let local_var_req = local_var_req_builder.build()?;
     let local_var_resp = local_var_client.execute(local_var_req).await?;
@@ -289,6 +307,9 @@ pub async fn list_roles_local_roles_get(configuration: &configuration::Configura
     if let Some(local_var_param_value) = authorization {
         local_var_req_builder = local_var_req_builder.header("authorization", local_var_param_value.to_string());
     }
+    if let Some(ref local_var_token) = local_var_configuration.bearer_access_token {
+        local_var_req_builder = local_var_req_builder.bearer_auth(local_var_token.to_owned());
+    };
 
     let local_var_req = local_var_req_builder.build()?;
     let local_var_resp = local_var_client.execute(local_var_req).await?;
@@ -320,6 +341,9 @@ pub async fn list_users_local_users_get(configuration: &configuration::Configura
     if let Some(local_var_param_value) = authorization {
         local_var_req_builder = local_var_req_builder.header("authorization", local_var_param_value.to_string());
     }
+    if let Some(ref local_var_token) = local_var_configuration.bearer_access_token {
+        local_var_req_builder = local_var_req_builder.bearer_auth(local_var_token.to_owned());
+    };
 
     let local_var_req = local_var_req_builder.build()?;
     let local_var_resp = local_var_client.execute(local_var_req).await?;

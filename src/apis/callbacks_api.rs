@@ -63,6 +63,9 @@ pub async fn get_callback_by_key_callbacks_key_delete(configuration: &configurat
     if let Some(local_var_param_value) = authorization {
         local_var_req_builder = local_var_req_builder.header("authorization", local_var_param_value.to_string());
     }
+    if let Some(ref local_var_token) = local_var_configuration.bearer_access_token {
+        local_var_req_builder = local_var_req_builder.bearer_auth(local_var_token.to_owned());
+    };
 
     let local_var_req = local_var_req_builder.build()?;
     let local_var_resp = local_var_client.execute(local_var_req).await?;
@@ -94,6 +97,9 @@ pub async fn get_callback_by_key_callbacks_key_get(configuration: &configuration
     if let Some(local_var_param_value) = authorization {
         local_var_req_builder = local_var_req_builder.header("authorization", local_var_param_value.to_string());
     }
+    if let Some(ref local_var_token) = local_var_configuration.bearer_access_token {
+        local_var_req_builder = local_var_req_builder.bearer_auth(local_var_token.to_owned());
+    };
 
     let local_var_req = local_var_req_builder.build()?;
     let local_var_resp = local_var_client.execute(local_var_req).await?;
@@ -125,6 +131,9 @@ pub async fn list_callbacks_callbacks_get(configuration: &configuration::Configu
     if let Some(local_var_param_value) = authorization {
         local_var_req_builder = local_var_req_builder.header("authorization", local_var_param_value.to_string());
     }
+    if let Some(ref local_var_token) = local_var_configuration.bearer_access_token {
+        local_var_req_builder = local_var_req_builder.bearer_auth(local_var_token.to_owned());
+    };
 
     let local_var_req = local_var_req_builder.build()?;
     let local_var_resp = local_var_client.execute(local_var_req).await?;
@@ -156,6 +165,9 @@ pub async fn register_callback_callbacks_post(configuration: &configuration::Con
     if let Some(local_var_param_value) = authorization {
         local_var_req_builder = local_var_req_builder.header("authorization", local_var_param_value.to_string());
     }
+    if let Some(ref local_var_token) = local_var_configuration.bearer_access_token {
+        local_var_req_builder = local_var_req_builder.bearer_auth(local_var_token.to_owned());
+    };
     local_var_req_builder = local_var_req_builder.json(&callback_entry);
 
     let local_var_req = local_var_req_builder.build()?;

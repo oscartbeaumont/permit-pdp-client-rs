@@ -38,6 +38,9 @@ pub async fn get_policy_store_details_policy_store_config_get(configuration: &co
     if let Some(local_var_param_value) = authorization {
         local_var_req_builder = local_var_req_builder.header("authorization", local_var_param_value.to_string());
     }
+    if let Some(ref local_var_token) = local_var_configuration.bearer_access_token {
+        local_var_req_builder = local_var_req_builder.bearer_auth(local_var_token.to_owned());
+    };
 
     let local_var_req = local_var_req_builder.build()?;
     let local_var_resp = local_var_client.execute(local_var_req).await?;
